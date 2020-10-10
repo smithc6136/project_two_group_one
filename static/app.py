@@ -4,8 +4,8 @@ from flask import Flask, jsonify
 
 conn_string = "host='localhost' dbname='pothole_db' user='mark' password='password'"
 
-rows = cur.fetchall()
-# print(rows)
+# rows = cur.fetchall()
+# # print(rows)
 
 # print("\nShow me the databases:\n")
 # for row in rows:
@@ -19,7 +19,7 @@ def location():
     conn = psycopg2.connect(conn_string)
     cur = conn.cursor()
     cur.execute("""SELECT * FROM potholes""")
-    cur.close()
+    # cur.close()
     locationrows= cur.fetchall()
     # print(locationrows)
 

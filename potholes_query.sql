@@ -11,8 +11,8 @@ location VARCHAR(255),
 city VARCHAR(25),
 state VARCHAR(2),
 zip INT,
-latitude DECIMAL,
-longitude DECIMAL
+latitude FLOAT,
+longitude FLOAT
 );
 
 SELECT * FROM potholes;
