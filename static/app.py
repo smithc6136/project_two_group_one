@@ -1,8 +1,9 @@
 from sqlalchemy import create_engine
 import psycopg2
+import config
 from flask import Flask, jsonify
 
-conn_string = "host='localhost' dbname='pothole_db' user='mark' password='password'"
+conn_string = f"host='localhost' dbname={config.dbname} user={config.user} password={config.password}"
 
 # rows = cur.fetchall()
 # # print(rows)
