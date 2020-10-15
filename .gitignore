@@ -23,4 +23,6 @@
 hs_err_pid*
 
 # ignore config file with API key in it
-config.js
+static/js/config.js
+static/config.py
+static/__pycache__/
