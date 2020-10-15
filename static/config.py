@@ -1,3 +1,3 @@
-password="password"
-dbname="pothole_db"
-user="mark"
+password="Remy0323"
+dbname="potholes_db"
+user="postgres"
