@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 import psycopg2
 import config
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 
 conn_string = f"host='localhost' dbname={config.dbname} user={config.user} password={config.password}"
 
@@ -19,7 +19,7 @@ app = Flask(__name__)
 def location():
     conn = psycopg2.connect(conn_string)
     cur = conn.cursor()
-    cur.execute("""SELECT * FROM potholes WHERE latitude IS NOT NULL""")
+    cur.execute("""SELECT * FROM potholes""")
     # cur.close()
     locationrows= cur.fetchall()
     # print(locationrows)
@@ -30,9 +30,6 @@ def location():
     # print(new_dict)
     return jsonify({"location":locationrows})
         
-@app.route("/home")
-def home():
-    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
