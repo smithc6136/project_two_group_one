@@ -72,7 +72,7 @@ entereddateData.location.forEach(function(data) {
     title: {
       text:'Potholes 2019 v. 2020',
       font: {
-        family: 'Courier New, monospace',
+        family: 'Segoe UI',
         size: 24
       },
       xref: 'paper',
@@ -82,7 +82,7 @@ entereddateData.location.forEach(function(data) {
       title: {
         text: 'Month',
         font: {
-          family: 'Courier New, monospace',
+          family: 'Segoe UI',
           size: 18,
           color: '#7f7f7f'
         }
@@ -90,7 +90,7 @@ entereddateData.location.forEach(function(data) {
     },
     yaxis: {
       title: {
-        text: 'Number of Potholes',
+        text: 'Segoe UI',
         font: {
           family: 'Courier New, monospace',
           size: 18,

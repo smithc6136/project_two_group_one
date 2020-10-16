@@ -1,11 +1,15 @@
 body {
+  max-width: 1000px;
   padding: 0;
-  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #map,
 body,
 html {
-  height: 85%;
-  width: 85%;
+  height: 75%;
+  width: 100%;
 }
+
+
