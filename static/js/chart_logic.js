@@ -90,9 +90,9 @@ entereddateData.location.forEach(function(data) {
     },
     yaxis: {
       title: {
-        text: 'Segoe UI',
+        text: 'Number of Potholes',
         font: {
-          family: 'Courier New, monospace',
+          family: 'Segoe UI',
           size: 18,
           color: '#7f7f7f'
         }
