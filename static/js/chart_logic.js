@@ -20,9 +20,10 @@ var svg = d3.select("body")
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 // Configure a parseTime function which will return a new Date object from a string
-var parseTime = d3.timeParse("%B");
+// var parseTime = d3.timeParse("%B");
 // Load data from miles-walked-this-month.csv
-d3.csv("data.csv",function(entereddateData) {
+var link = "http://127.0.0.1:5001";
+d3.json(link,function(entereddateData) {
   // Print the milesData
   console.log(entereddateData); 
   var dates = []
@@ -31,10 +32,12 @@ d3.csv("data.csv",function(entereddateData) {
       "2020": {}
   }
 //  Format the date and cast the miles value to a number
-entereddateData.forEach(function(data) {
-   var year = data.entereddate.split("/")[2].split(" ")[0]
-   var month = data.entereddate.split("/")[0]
+entereddateData.location.forEach(function(data) {
+   var year = data[15];
+   var month = data[14];
+   
     if (parseInt(year)==2019){
+      console.log(year,month);
         if (month in month_data[year]){
             month_data[year][month]+=1     
         }

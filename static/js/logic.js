@@ -1,3 +1,8 @@
+// get table selection
+var selector = document.getElementById('table-selector-dropdown')
+var value = selector.options[selector.selectedIndex].value.toLowerCase()
+
+
 // Creating map object
 var myMap = L.map("map", {
   center: [39.1653, -86.5264],
