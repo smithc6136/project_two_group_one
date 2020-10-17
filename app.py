@@ -3,14 +3,16 @@ import psycopg2
 import config
 import pandas as pd 
 import os 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 conn_string = os.environ['DATABASE_URL']
-
+@app.route("/home")
+def home():
+    return app.send_static_file('index.html')
 # rows = cur.fetchall()
 # # print(rows)
 
