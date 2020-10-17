@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 import psycopg2
 import config
+import os 
 from flask import Flask, jsonify
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
