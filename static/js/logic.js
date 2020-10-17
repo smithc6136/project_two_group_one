@@ -33,21 +33,21 @@ function buildMap(year) {
     console.log(data)
     var potholes = data.location
     for (var i = 0; i < potholes.length; i++) {
-      console.log(parseInt(data.location[i][15]),year)
-      if (parseInt(data.location[i][15]) == year) {
+      console.log(parseInt(data.location[i][16]),year)
+      if (parseInt(data.location[i][16]) == year) {
         try {var pothole = potholes[i];
-        var mark = L.marker([pothole[12], pothole[13]])
+        var mark = L.marker([pothole[13], pothole[14]])
             // pop up not working...
-            .bindPopup("<h1>" + pothole[8]+ "</h1>")
+            .bindPopup("<h1>" + pothole[9]+ "</h1>")
             .addTo(myMap);
           markers.push(mark)}
         catch {continue}
       }
       else if (year == "2019-2020") {
         try {var pothole = potholes[i];
-        var mark = L.marker([pothole[12], pothole[13]])
+        var mark = L.marker([pothole[13], pothole[14]])
               // pop up not working...
-              .bindPopup("<h1>" + pothole[8]+ "</h1>")
+              .bindPopup("<h1>" + pothole[9]+ "</h1>")
               .addTo(myMap);
               markers.push(mark)}
           catch {continue}

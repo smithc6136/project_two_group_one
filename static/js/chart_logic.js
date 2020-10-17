@@ -33,8 +33,8 @@ d3.json(link,function(entereddateData) {
   }
 //  Format the date and cast the miles value to a number
 entereddateData.location.forEach(function(data) {
-   var year = data[15];
-   var month = data[14];
+   var year = data[16];
+   var month = data[15];
    
     if (parseInt(year)==2019){
       console.log(year,month);
