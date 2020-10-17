@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 import psycopg2
 import config
+import pandas as pd 
 import os 
 from flask import Flask, jsonify
 from flask_cors import CORS, cross_origin
@@ -16,7 +17,9 @@ conn_string = os.environ['DATABASE_URL']
 # print("\nShow me the databases:\n")
 # for row in rows:
 #     print("   ", row[9])
-
+conn = psycopg2.connect(conn_string)
+cur = conn.cursor()
+pd.read_csv("data.csv").to_sql("potholes",conn)
 
 @app.route("/")
 @cross_origin()
