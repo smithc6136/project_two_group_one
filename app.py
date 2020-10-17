@@ -7,7 +7,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-conn_string = f"host='localhost' dbname={config.dbname} user={config.user} password={config.password}"
+conn_string = os.environ['DATABASE_URL']
 
 # rows = cur.fetchall()
 # # print(rows)
