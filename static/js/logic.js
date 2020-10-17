@@ -25,7 +25,7 @@ function buildMap(year) {
   }).addTo(myMap);
 
   // Use this link to get the geojson data.
-  var link = "http://127.0.0.1:5001";
+  var link = "https://project-two-group-one.herokuapp.com";
 
   // Grabbing our GeoJSON data..
   // 17.2 Activity 3 to add cluster group

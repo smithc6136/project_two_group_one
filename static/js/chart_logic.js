@@ -22,7 +22,7 @@ var chartGroup = svg.append("g")
 // Configure a parseTime function which will return a new Date object from a string
 // var parseTime = d3.timeParse("%B");
 // Load data from miles-walked-this-month.csv
-var link = "http://127.0.0.1:5001";
+var link = "https://project-two-group-one.herokuapp.com";
 d3.json(link,function(entereddateData) {
   // Print the milesData
   console.log(entereddateData); 
