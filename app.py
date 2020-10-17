@@ -17,8 +17,8 @@ conn_string = os.environ['DATABASE_URL']
 # print("\nShow me the databases:\n")
 # for row in rows:
 #     print("   ", row[9])
-conn = psycopg2.connect(conn_string)
-cur = conn.cursor()
+conn = sqlalchemy.create_engine(conn_string)
+
 pd.read_csv("data.csv").to_sql("potholes",conn)
 
 @app.route("/")
